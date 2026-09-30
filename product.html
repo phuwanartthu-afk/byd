@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด | Body Scent</title>
+  <meta name="description" content="น้ำหอมฉีดตัวและโรลออน Body Scent เลือกดูตามอารมณ์กลิ่น Fresh, Sweet, Confident และ Romance">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ข้อความสถานะ (กำลังโหลด / ไม่พบสินค้า / error) ให้กินเต็มความกว้าง grid */
+    #product-list > p { grid-column: 1 / -1; }
+
+    .page-head { padding: var(--space-6) 0 var(--space-5); }
+    .page-head h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); margin-bottom: 0; }
+    .page-head .lead { margin-bottom: 0; }
+
+    .site-footer h4 { color: var(--cream); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">BODY SCENT</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" aria-current="page">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head section--cream">
+      <div class="container">
+        <h1>สินค้าทั้งหมด</h1>
+        <hr class="rule">
+        <p class="lead">น้ำหอมฉีดตัวและโรลออน เลือกตามอารมณ์กลิ่นที่ใช่สำหรับคุณ</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="filter-bar" class="filters" role="group" aria-label="กรองสินค้าตามอารมณ์กลิ่น"></div>
+        <div id="product-list" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="brand">BODY SCENT</div>
+          <p class="mt-4 mb-0">หอมยาวนาน มั่นใจทุกไลฟ์สไตล์</p>
+        </div>
+        <div>
+          <h4>เมนู</h4>
+          <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="product.html">สินค้าทั้งหมด</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>อารมณ์กลิ่น</h4>
+          <ul>
+            <li><a href="product.html?mood=fresh">Fresh</a></li>
+            <li><a href="product.html?mood=sweet">Sweet</a></li>
+            <li><a href="product.html?mood=confident">Confident</a></li>
+            <li><a href="product.html?mood=romance">Romance</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__copy mb-0">© 2026 Body Scent. สงวนลิขสิทธิ์</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Body Scent | หอมยาวนาน มั่นใจทุกไลฟ์สไตล์</title>
+  <meta name="description" content="Body Scent น้ำหอมฉีดตัวและโรลออน 4 อารมณ์กลิ่น Fresh, Sweet, Confident และ Romance">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ปรับเฉพาะหน้าแรก: hero เต็มจอแรก + การ์ด mood ที่กดได้ */
+    .hero--full {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 77px);
+      min-height: calc(100svh - 77px);
+      padding: var(--space-6) 0;
+    }
+    .hero--full h1 { margin-bottom: 0; }
+    .hero--full h1 span { display: inline-block; }
+    .hero--full .lead { margin: 0 auto var(--space-4); }
+
+    .mood-item {
+      display: block;
+      padding: var(--space-4) var(--space-3);
+      background: var(--white);
+      border: 1px solid var(--line-soft);
+      border-top-color: var(--line);
+      transition: border-color 0.35s var(--ease);
+    }
+    .mood-item:hover { border-color: var(--gold-soft); }
+    .mood-item h3 { margin-top: 0; margin-bottom: 0; }
+    .mood-item .link { font-size: 0.9rem; }
+
+    .site-footer h4 { color: var(--cream); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">BODY SCENT</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html" aria-current="page">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero hero--full">
+      <div class="container text-center">
+        <h1><span>หอมยาวนาน</span> <span>มั่นใจทุกไลฟ์สไตล์</span></h1>
+        <hr class="rule">
+        <p class="lead">น้ำหอมฉีดตัวและโรลออน 4 อารมณ์กลิ่น เลือกให้ตรงกับตัวคุณในแต่ละวัน</p>
+        <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- 4 Moods -->
+    <section class="section section--cream" id="moods">
+      <div class="container">
+        <div class="section__head text-center">
+          <h2>เลือกกลิ่นให้ตรงกับอารมณ์ของคุณ</h2>
+          <hr class="rule">
+          <p class="muted">แตะที่อารมณ์กลิ่นที่ชอบ เพื่อดูสินค้าในกลุ่มนั้น</p>
+        </div>
+
+        <div class="mood-grid">
+          <a class="mood-item" data-mood="fresh" href="product.html?mood=fresh">
+            <h3>Fresh</h3>
+            <span class="mood-line"></span>
+            <p>สะอาด สดชื่น เหมาะกับทุกวัน</p>
+            <span class="link">ดูสินค้า Fresh</span>
+          </a>
+
+          <a class="mood-item" data-mood="sweet" href="product.html?mood=sweet">
+            <h3>Sweet</h3>
+            <span class="mood-line"></span>
+            <p>หวานนุ่ม อบอุ่นแบบพอดี</p>
+            <span class="link">ดูสินค้า Sweet</span>
+          </a>
+
+          <a class="mood-item" data-mood="confident" href="product.html?mood=confident">
+            <h3>Confident</h3>
+            <span class="mood-line"></span>
+            <p>มั่นคง สง่า พร้อมสำหรับวันสำคัญ</p>
+            <span class="link">ดูสินค้า Confident</span>
+          </a>
+
+          <a class="mood-item" data-mood="romance" href="product.html?mood=romance">
+            <h3>Romance</h3>
+            <span class="mood-line"></span>
+            <p>อ่อนหวาน โรแมนติก สำหรับช่วงเวลาพิเศษ</p>
+            <span class="link">ดูสินค้า Romance</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="brand">BODY SCENT</div>
+          <p class="mt-4 mb-0">หอมยาวนาน มั่นใจทุกไลฟ์สไตล์</p>
+        </div>
+        <div>
+          <h4>เมนู</h4>
+          <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="product.html">สินค้าทั้งหมด</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>อารมณ์กลิ่น</h4>
+          <ul>
+            <li><a href="product.html?mood=fresh">Fresh</a></li>
+            <li><a href="product.html?mood=sweet">Sweet</a></li>
+            <li><a href="product.html?mood=confident">Confident</a></li>
+            <li><a href="product.html?mood=romance">Romance</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__copy mb-0">© 2026 Body Scent. สงวนลิขสิทธิ์</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
